@@ -1,0 +1,28 @@
+{
+    "SYSA0101":{
+        "code": "SYSC.01.01",
+        "msg": "Account has been block.",
+        "desc": "Account has been block"
+    },
+    "SYSA0102":{
+        "code": "SYSC.01.02",
+        "msg": "Please Verify your account.",
+        "desc": "Please Verify your account."
+    },
+    "SYSA0103":{
+        "code": "SYSC.01.03",
+        "msg":  "Account has been inactive",
+        "desc": "Account has been inactive"
+    },
+    "SYSA0104":{
+        "code": "SYSC.01.04",
+        "msg":  "Invalid email or password",
+        "desc": "User email not exist in our system"
+    },
+    "SYSA0105":{
+        "code": "SYSC.01.05",
+        "msg":  "Invalid email or password",
+        "desc": "User password is not match"
+    }
+
+}

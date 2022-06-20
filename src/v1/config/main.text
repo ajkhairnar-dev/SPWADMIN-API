@@ -1,0 +1,50 @@
+const client = new Client({
+  host: DB.host,
+  user: DB.user,
+  port: DB.port,
+  password: DB.password,
+  database: DB.database,
+  ssl: {
+    rejectUnauthorized: false
+  }
+
+})
+
+
+{
+  "host": "localhost",
+  "user": "postgres",
+  "password": "Alpha1not2$$", 
+  "database": "spw",
+  "port": 5432
+}
+
+
+
+{
+  "host": "ec2-44-196-174-238.compute-1.amazonaws.com",
+  "user": "qiuqkdearlfgmr",
+  "password": "8e1937822002cdc7301fadadae18a4f5d18c9eb3c06feadb56808f87fe89b25b",
+  "database": "deko34m3t5q8p8",
+  "port": 5432
+  
+}
+
+
+const Joi = require('@hapi/joi');
+
+const joiSchema = Joi.object({
+  a: Joi.string()
+    .min(2)
+    .max(10)
+    .required()
+    .messages({
+      'string.base': `"a" should be a type of 'text'`,
+      'string.empty': `"a" cannot be an empty field`,
+      'string.min': `"a" should have a minimum length of {#limit}`,
+      'any.required': `"a" is a required field`
+    })
+});
+
+const validationResult = joiSchema.validate({ a: 2 }, { abortEarly: false });
+console.log(validationResult.error); // expecting ValidationError: "a" should be a type of 'text'

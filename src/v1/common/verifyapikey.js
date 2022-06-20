@@ -1,0 +1,14 @@
+const config = require("../config/config.json");
+const jwt = require('jsonwebtoken');
+
+const verifyApiKey = async(req,res,next) => {
+    const apikey = req.headers['apikey'];
+    if(apikey != config.apikey){
+        return res.status(400).send({ success:false,message:"Authentication Fail.", error_code:{},data:{}})
+    }
+    next()
+}
+
+module.exports = {
+    verifyApiKey
+}

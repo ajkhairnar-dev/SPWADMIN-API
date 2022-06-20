@@ -1,0 +1,70 @@
+{
+    "SYSC0000":{
+        "code": "SYSC.00.00",
+        "msg": "Authentication error."
+    },
+    "SYSC0001" :{
+        "code": "SYSC.00.01",
+        "msg": "Token authentication error."
+    },
+    "SYSC0002" :{
+        "code": "SYSC.00.02",
+        "msg": "Session has Expired or Auth Error."
+    },
+    "sms" :{
+        "SYSC0301": {
+            "code": "SYSC.03.01",
+            "msg": "Something Wents Wrong. Please try again.",
+            "desc": "Error Occurs in SMS Sending."
+        }
+    },
+    "auth":{
+        "SYSC0101": {
+            "code": "SYSC.01.01",
+            "msg": "Mobile no. not exist in system."
+        },
+        "SYSC0102" :{
+            "code": "SYSC.01.02",
+            "msg": "You are block. Please contact to scrapwale."
+        },
+        "SYSC0103" :{
+            "code": "SYSC.01.03",
+            "msg": "Enter valid mobile or password."
+        },
+        "SYSC0104" :{
+            "code": "SYSC.01.04",
+            "msg": "Mobile number already registered."
+        },
+        "SYSC0105":{
+            "code":"SYSC.01.05",
+            "msg": "Error occurs in otp verification."
+        },
+        "SYSC0106":{
+            "code":"SYSC.01.06",
+            "msg": "Session is expired.Resend OTP."
+        },
+        "SYSC0107":{
+            "code":"SYSC.01.07",
+            "msg": "Enter valid OTP."
+        },
+        "SYSC0108":{
+            "code":"SYSC.01.08",
+            "msg": "Error occurs in otp verification."
+        },
+        "SYSC0109":{
+            "code":"SYSC.01.01",
+            "msg":"Error occurs in setpassword."
+        },
+        "SYSC0110":{
+            "code":"SYSC.01.10",
+            "msg":"Something went wrong."
+        }
+        
+    },
+    "profile" :{
+        "SYSC0201" :{
+            "code": "SYSC.02.01",
+            "msg": "Something wents wrong."
+        }
+    }
+}
