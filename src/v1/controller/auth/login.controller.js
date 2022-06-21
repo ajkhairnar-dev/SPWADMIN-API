@@ -23,17 +23,18 @@ const login = async (req,res) => {
         const token = await generateAccessToken(data);
         res.status(200).send({ success:true,message:"Login successfully.", data:{user:data,token:token} })
     }catch (error) {
+        console.log(error)
         return res.status(400).send({success:false, data:{ error:error } })
     }
 }
 
 const checkConditions = (rows) => {
     if(rows[0].isblock == 1){ //isblock
-        return res.status(400).send({ success:false,message:ecode.SYSA0101.msg,errorCode:ecode.SYSA0101.code, data:{} })
-    }else if(rows[0].isactive == 1){ //isactive
-        return res.status(400).send({ success:false,message:ecode.SYSA0102.msg,errorCode:ecode.SYSA0102.code, data:{} })
-    }else if(rows[0].isactive == 1){ //isverify
-        return res.status(400).send({ success:false,message:ecode.SYSA0103.msg,errorCode:ecode.SYSA0103.code, data:{} })
+        return { success:false,message:ecode.SYSA0101.msg,errorCode:ecode.SYSA0101.code, data:{} }
+    }else if(rows[0].isactive == 0){ //isactive
+        return { success:false,message:ecode.SYSA0103.msg,errorCode:ecode.SYSA0103.code, data:{} }
+    }else if(rows[0].isverified == 0){ //isverify
+        return { success:false,message:ecode.SYSA0102.msg,errorCode:ecode.SYSA0102.code, data:{} }
     }
 }
 
