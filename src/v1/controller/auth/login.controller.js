@@ -23,7 +23,6 @@ const login = async (req,res) => {
         const token = await generateAccessToken(data);
         res.status(200).send({ success:true,message:"Login successfully.", data:{user:data,token:token} })
     }catch (error) {
-        console.log(error)
         return res.status(400).send({success:false, data:{ error:error } })
     }
 }

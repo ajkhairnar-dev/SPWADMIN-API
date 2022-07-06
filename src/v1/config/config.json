@@ -4,6 +4,12 @@
         "key":"Alpha1not2$$",
         "sessiontime":"1h"
     },
+    "s3":{
+        "keyid":"AKIAUQSOU3BBEYTLZL56",
+        "accesskey":"k3fH2hmRcrVdbRvrKDwCFlF1mwnseqLIa2vrIiRa",
+        "region":"ap-south-1",
+        "bucketname":"spwapp"
+    },
     "sms":{
         "authkey":"348875AVUlnLVXZoq6128c7e0P1",
         "senderid":"ASCRAP",

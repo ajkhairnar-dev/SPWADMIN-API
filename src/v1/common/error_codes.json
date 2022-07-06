@@ -1,0 +1,14 @@
+{
+    "SYSA0000":{
+        "code": "SYSA.00.00",
+        "msg": "Authentication error."
+    },
+    "SYSA0001" :{
+        "code": "SYSA.00.01",
+        "msg": "Token authentication error."
+    },
+    "SYSA0002" :{
+        "code": "SYSA.00.02",
+        "msg": "Session has Expired or Auth Error."
+    }
+}

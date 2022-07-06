@@ -11,9 +11,11 @@ app.use(express.json());
 const { verifyApiKey} = require('./src/v1/common/verifyapikey')
 
 const auth = require("./src/v1/route/auth.route")
+const material = require("./src/v1/route/material.route")
 
 app.use(verifyApiKey)
 app.use(auth)
+app.use(material)
 
 app.get('*', function(req, res){
     return res.status(400).send("Authentication failed.")
