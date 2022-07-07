@@ -1,0 +1,3 @@
+auth - SYSA0101                         01
+material - SYSA0301                     03
+s3bucket - SYSA0701                     07

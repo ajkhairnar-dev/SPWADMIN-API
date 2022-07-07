@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
-const { Promise } = require('q');
 const config = require('../../config/config.json');
+const ecode = require("./error_code.json");
 
 AWS.config.update({
     accessKeyId: config.s3.keyid,
@@ -21,7 +21,7 @@ const s3Fileupload = (obj)=>{
     return new Promise((resolve,reject)=>{
         s3.putObject(s3object, function(err, data){
             if (err) { 
-              reject(new Error("s3 upload error"))
+              reject(new Error({ success:false,message:ecode.SYSA0701.msg,errorCode:ecode.SYSA0701.code, data:{} }))
             } else {
               const final = _.omit(obj,'fileData');
               resolve(final)

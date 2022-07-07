@@ -1,0 +1,8 @@
+{
+    "SYSA0701":{
+        "code": "SYSC.07.01",
+        "msg": "Fail to upload file.",
+        "desc": "Error occur in file upload on s3 bucket."
+    }
+
+}
