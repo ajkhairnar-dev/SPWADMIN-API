@@ -1,32 +1,36 @@
 const AWS = require('aws-sdk');
+const { Promise } = require('q');
 const config = require('../../config/config.json');
 
-const s3Fileupload = async(obj)=>{
+AWS.config.update({
+    accessKeyId: config.s3.keyid,
+    secretAccessKey: config.s3.accesskey,
+    region: config.s3.region 
+});
+const s3 = new AWS.S3({ params: {Bucket: config.s3.bucketname} });
+
+const s3Fileupload = (obj)=>{
     const buffer = Buffer.from(obj.fileData.replace(/^data:image\/\w+;base64,/, ""),'base64');
     var s3object = {
-        Key: obj.folder+'/'+obj.filename, 
+        Key: obj.folderName+'/'+obj.fileName, 
         Body: buffer,
         ContentEncoding: 'base64',
-        ContentType: fileFormat   //'image/jpeg'
+        ContentType: obj.fileFormat   //'image/jpeg'
     };
 
-    AWS.config.update({
-        accessKeyId: config.s3.keyid,
-        secretAccessKey: config.s3.accesskey,
-        region: config.s3.region 
-    });
-    const s3 = new AWS.S3({ params: {Bucket: config.s3.bucketname} });
-
-    await s3.putObject(s3object, function(err, data){
-        if (err) { 
-          console.log(err);
-        } else {
-          res.json({path:"https://s3.amazonaws.com/<S3 Bucket Name>/"+name});
-        }
-    });
+    return new Promise((resolve,reject)=>{
+        s3.putObject(s3object, function(err, data){
+            if (err) { 
+              reject(new Error("s3 upload error"))
+            } else {
+              const final = _.omit(obj,'fileData');
+              resolve(final)
+            }
+        });
+    })
 }
 
 
 module.exports = {
-    s3Fileuplod
+    s3Fileupload:s3Fileupload
 }

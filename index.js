@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT || 3000
 global.conn = require("./src/v1/config/dbconnection");
 global._ = require('underscore');
+global.q = require('q');
 global.basepath='/v1/admin'
 app.use(cors())
 app.use(express.json());
