@@ -30,7 +30,28 @@ const s3Fileupload = (obj)=>{
     })
 }
 
+const s3FilereadStaticURL = (path) =>{
+   return `https://${config.s3.bucketname}.s3.${config.s3.region}.amazonaws.com${path}`   
+}
+
+
+// const s3Fileread=(obj)=>{
+//     var s3object = {
+//         Key: obj.fileName, 
+//     }
+//     s3.getObject(s3object,function(err,data){
+//         if (err) { 
+//             console.log(err)
+//           } else {
+
+//             const body = Buffer.from(data.Body).toString('utf8');
+//             console.log(body)
+//           }
+//     })
+// }
+
 
 module.exports = {
-    s3Fileupload:s3Fileupload
+    s3Fileupload:s3Fileupload,
+    s3FilereadStaticURL:s3FilereadStaticURL
 }
