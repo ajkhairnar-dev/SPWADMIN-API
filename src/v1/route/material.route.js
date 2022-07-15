@@ -4,13 +4,16 @@ const { getMeterial,addMaterial,deleteMaterial,changeMaterialStatus,editMaterial
 const { addmaterialValidation,deletematerialValidation,changematerialstatusValidation,editmaterialValidation} = require('../schema/material/material.validation');
 const {verifyAccessToken} = require('../common/jsonwebtoken');
 
+//---- material-------
 material.get(basepath+'/getmaterial',getMeterial)
 material.post(basepath+'/addmaterial',addmaterialValidation,addMaterial)
-
 material.post(basepath+'/editmaterial',editmaterialValidation,editMaterial)
 material.post(basepath+'/deletematerial',deletematerialValidation,deleteMaterial)
-
 material.post(basepath+'/changematerialstatus',changematerialstatusValidation,changeMaterialStatus)
+
+
+//------materiarate-----
+material.get(basepath+'/getmaterialrate',getMeterialrate)
 
 module.exports = material
 
