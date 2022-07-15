@@ -3,6 +3,11 @@
         "code": "SYSC.07.01",
         "msg": "Fail to upload file.",
         "desc": "Error occur in file upload on s3 bucket."
+    },
+    "SYSA0702":{
+        "code": "SYSC.07.02",
+        "msg": "Fail to delete file.",
+        "desc": "Error occur in file delete on s3 bucket."
     }
 
 }

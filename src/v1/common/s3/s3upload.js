@@ -17,7 +17,6 @@ const s3Fileupload = (obj)=>{
         ContentEncoding: 'base64',
         ContentType: obj.fileFormat   //'image/jpeg'
     };
-
     return new Promise((resolve,reject)=>{
         s3.putObject(s3object, function(err, data){
             if (err) { 
@@ -31,9 +30,24 @@ const s3Fileupload = (obj)=>{
 }
 
 const s3FilereadStaticURL = (path) =>{
-   return `https://${config.s3.bucketname}.s3.${config.s3.region}.amazonaws.com${path}`   
+   return `https://${config.s3.bucketname}.s3.${config.s3.region}.amazonaws.com/${path}`   
 }
 
+const s2Filedelete = (obj) => {
+    var s3object = {
+        Key : obj.fileName
+    }
+    return new Promise((resolve,reject)=>{
+        s3.deleteObject(s3object,function(err,data){
+            if (err) { 
+                reject(new Error({ success:false,message:ecode.SYSA0702.msg,errorCode:ecode.SYSA0702.code, data:{} }))
+              } else {
+                console.log(data)
+                resolve(true)
+              }
+        })
+    })
+}
 
 // const s3Fileread=(obj)=>{
 //     var s3object = {
@@ -53,5 +67,6 @@ const s3FilereadStaticURL = (path) =>{
 
 module.exports = {
     s3Fileupload:s3Fileupload,
-    s3FilereadStaticURL:s3FilereadStaticURL
+    s3FilereadStaticURL:s3FilereadStaticURL,
+    s2Filedelete:s2Filedelete
 }

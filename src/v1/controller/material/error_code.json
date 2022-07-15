@@ -3,6 +3,16 @@
         "code": "SYSC.03.01",
         "msg": "Something wents wrong.",
         "desc": "Something wents wrong."
+    },
+    "SYSA0302":{
+        "code": "SYSC.03.02",
+        "msg": "Material Name already exist.",
+        "desc": "Material Name already exist in System"
+    },
+    "SYSA0303":{
+        "code": "SYSC.03.03",
+        "msg": "Material Not exist.",
+        "desc": "Material Not exist in System"
     }
 
 }
