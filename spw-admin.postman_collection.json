@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2aec9e1a-78d8-4391-a162-2e6ecd6241d4",
+		"_postman_id": "058114b6-e5de-4aa4-b92b-410f13f5d139",
 		"name": "spw-admin",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -60,7 +60,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"materialname\":\"Plastic\",\r\n    \"isactive\":1,\r\n    \"materialicon\":{\r\n        \"fileData\": \"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\",\r\n        \"fileExtension\": \"png\",\r\n        \"fileName\": \"putStatic.png\",\r\n        \"fileSize\": 44055,\r\n        \"fileType\": \"image/png\"\r\n    }\r\n    \r\n}",
+							"raw": "{\r\n    \"materialname\":\"jk\",\r\n    \"isactive\":1,\r\n    \"materialicon\":{\r\n        \"fileData\": \"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\",\r\n        \"fileExtension\": \"png\",\r\n        \"fileName\": \"putStatic.png\",\r\n        \"fileSize\": 44055,\r\n        \"fileType\": \"image/png\"\r\n    }\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -82,8 +82,120 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "EditMaterial",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "8xas/sRrL3%UbT_A",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"materialid\":21,\r\n    \"materialname\":\"Spider12\",\r\n    \"isactive\":1,\r\n    \"materialicon\":{\r\n        \"fileData\": null,\r\n        \"fileExtension\": null,\r\n        \"fileName\": null,\r\n        \"fileSize\": null,\r\n        \"fileType\": null\r\n    }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/admin/editmaterial",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"admin",
+								"editmaterial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMaterial",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "8xas/sRrL3%UbT_A",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"materialid\": 17\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/admin/deletematerial",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"admin",
+								"deletematerial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "8xas/sRrL3%UbT_A",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"materialid\": 20,\r\n    \"isactive\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/admin/changematerialstatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"admin",
+								"changematerialstatus"
+							]
+						}
+					},
+					"response": []
 				}
 			]
+		},
+		{
+			"name": "MaterialMapWithCity",
+			"item": []
 		}
 	]
 }
